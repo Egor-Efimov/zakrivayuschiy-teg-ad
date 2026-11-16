@@ -95,24 +95,23 @@
   color: var(--Themes-mainColor, #000000);
   font-family: var(--accent-font);
   font-size: 14px;
-  line-height: 100%; 
-  text-transform: uppercase; 
-  opacity: 0.5; 
+  line-height: 100%;
+  text-transform: uppercase;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
-  
+
   text-shadow: -1px 0 var(--Themes-background, #ffffff),
     0 1px var(--Themes-background, #ffffff),
     1px 0 var(--Themes-background, #ffffff),
     0 -1px var(--Themes-background, #ffffff);
 }
 
-@supports (text-stroke: 2px var(--Themes-background, #ffffff)) or
-  (-webkit-text-stroke: 2px var(--Themes-background, #ffffff)) {
+@supports (text-stroke: 2px var(--Themes-background, #ffffff)) or (-webkit-text-stroke: 2px var(--Themes-background, #ffffff)) {
   .label__text {
     text-shadow: none;
     text-stroke: 2px var(--Themes-background, #ffffff);
     -webkit-text-stroke: 2px var(--Themes-background, #ffffff);
-    paint-order: stroke fill; 
+    paint-order: stroke fill;
   }
 }
 
@@ -268,7 +267,7 @@
   filter: saturate(390%) contrast(190%) hue-rotate(200deg);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header-mobile {
     inline-size: 100%;
   }
