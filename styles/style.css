@@ -1,8 +1,10 @@
 .page {
   font-family: var(--main-font);
+  background-color: var(--Themes-background, #ffffff);
   background-image: var(--background-color);
-  background-size: cover;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 960px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-regular);
