@@ -1,13 +1,22 @@
 .page {
+  position: relative;
+  isolation: isolate;
   font-family: var(--main-font);
   background-color: var(--Themes-background, #ffffff);
-  background-image: var(--background-color);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% 960px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-regular);
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  block-size: 960px;
+  background-image: var(--background-color);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .header {
@@ -32,7 +41,7 @@
 
 .header__title {
   margin: 0;
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
   font-weight: 400;
   text-transform: uppercase;
@@ -41,7 +50,7 @@
 .header__subtitle {
   margin: 0;
   padding-top: 20px;
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 100%;
   font-weight: 400;
   text-transform: uppercase;
